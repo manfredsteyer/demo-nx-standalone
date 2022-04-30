@@ -15,10 +15,10 @@ import material from './material';
   standalone: true,
   selector: 'app-root',
   imports: [
+    ...material,
+
     RouterModule,
     CommonModule,
-
-    ...material,
 
     NavbarComponent,
     SidebarComponent,
