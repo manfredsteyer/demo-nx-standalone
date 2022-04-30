@@ -1,0 +1,42 @@
+{
+  "projectType": "library",
+  "root": "libs/shared/ui-common",
+  "sourceRoot": "libs/shared/ui-common/src",
+  "prefix": "common",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": ["dist/libs/shared/ui-common"],
+      "options": {
+        "project": "libs/shared/ui-common/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/shared/ui-common/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/shared/ui-common/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/shared/ui-common"],
+      "options": {
+        "jestConfig": "libs/shared/ui-common/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/shared/ui-common/**/*.ts",
+          "libs/shared/ui-common/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["domain:shared", "type:ui"]
+}

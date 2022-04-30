@@ -1,0 +1,42 @@
+{
+  "projectType": "library",
+  "root": "libs/booking/domain",
+  "sourceRoot": "libs/booking/domain/src",
+  "prefix": "booking",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": ["dist/libs/booking/domain"],
+      "options": {
+        "project": "libs/booking/domain/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/booking/domain/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/booking/domain/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/booking/domain"],
+      "options": {
+        "jestConfig": "libs/booking/domain/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/booking/domain/**/*.ts",
+          "libs/booking/domain/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["domain:booking", "type:domain-logic"]
+}

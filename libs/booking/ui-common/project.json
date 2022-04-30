@@ -1,0 +1,42 @@
+{
+  "projectType": "library",
+  "root": "libs/booking/ui-common",
+  "sourceRoot": "libs/booking/ui-common/src",
+  "prefix": "common",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": ["dist/libs/booking/ui-common"],
+      "options": {
+        "project": "libs/booking/ui-common/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/booking/ui-common/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/booking/ui-common/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/booking/ui-common"],
+      "options": {
+        "jestConfig": "libs/booking/ui-common/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/booking/ui-common/**/*.ts",
+          "libs/booking/ui-common/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["domain:booking", "type:ui"]
+}

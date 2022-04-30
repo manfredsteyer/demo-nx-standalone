@@ -1,0 +1,28 @@
+{
+  "root": "apps/booking-e2e",
+  "sourceRoot": "apps/booking-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/booking-e2e/cypress.json",
+        "devServerTarget": "booking:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "booking:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/booking-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["booking"]
+}

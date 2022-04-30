@@ -14,7 +14,19 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@nx-example/booking/domain": ["libs/booking/domain/src/index.ts"],
+      "@nx-example/booking/feature-book": [
+        "libs/booking/feature-book/src/index.ts"
+      ],
+      "@nx-example/booking/feature-tickets": [
+        "libs/booking/feature-tickets/src/index.ts"
+      ],
+      "@nx-example/booking/ui-common": ["libs/booking/ui-common/src/index.ts"],
+      "@nx-example/shared/ui-common": ["libs/shared/ui-common/src/index.ts"],
+      "@nx-example/shared/ui-shell": ["libs/shared/ui-shell/src/index.ts"],
+      "@nx-example/shared/util-common": ["libs/shared/util-common/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
