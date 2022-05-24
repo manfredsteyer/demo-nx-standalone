@@ -19,13 +19,13 @@ if (environment.production) {
 
 bootstrapApplication(AppComponent, {
   providers: [
-    ...importProvidersFrom(RouterModule.forRoot(APP_ROUTES)),
-    ...importProvidersFrom(StoreModule.forRoot(reducer)),
-    ...importProvidersFrom(EffectsModule.forRoot()),
-    ...importProvidersFrom(StoreDevtoolsModule.instrument()),
-    ...importProvidersFrom(HttpClientModule),
-    ...importProvidersFrom(BrowserAnimationsModule),
-    ...importProvidersFrom(LayoutModule),
+    importProvidersFrom(HttpClientModule),
+    importProvidersFrom(RouterModule.forRoot(APP_ROUTES)),
+    importProvidersFrom(StoreModule.forRoot(reducer)),
+    importProvidersFrom(EffectsModule.forRoot()),
+    importProvidersFrom(StoreDevtoolsModule.instrument()),
+    importProvidersFrom(BrowserAnimationsModule),
+    importProvidersFrom(LayoutModule),
   ]
 });
 

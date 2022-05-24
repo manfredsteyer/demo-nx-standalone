@@ -15,6 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@nx-example/boarding/domain": ["libs/boarding/domain/index.ts"],
+
       "@nx-example/booking/domain": ["libs/booking/domain/src/index.ts"],
       "@nx-example/booking/feature-book": [
         "libs/booking/feature-book/src/index.ts"

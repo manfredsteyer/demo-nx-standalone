@@ -15,7 +15,7 @@ import { take } from "rxjs";
     FlightCardComponent,
     CityValidator,
   ],
-  selector: 'app-search',
+  selector: 'flight-search',
   templateUrl: './flight-search.component.html'
 })
 export class FlightSearchComponent {
