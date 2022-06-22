@@ -4,6 +4,7 @@ import { Component, Inject } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { map, shareReplay } from 'rxjs';
+import { FlightBookingComponent } from '@nx-example/booking/feature-book';
 
 @Component({
     standalone: true,
